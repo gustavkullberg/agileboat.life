@@ -13,6 +13,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to Agilbåt.life
         </h1>
+        
         <img className="boat" style={{marginTop:20}} src={url}/>
       </main>
     </div>
