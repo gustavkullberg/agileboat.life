@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <img className="boat" style={{ width: '60%' }} src="/boat.jpg" />
+        <img className={styles.boat} src="/boat.jpg" />
       </main>
 
       <footer className={styles.footer}>© Agilbåt.life, 2020</footer>

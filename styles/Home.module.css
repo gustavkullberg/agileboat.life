@@ -156,9 +156,18 @@
   zoom: 50;
 }
 
+.boat {
+  width: 95%;
+  box-shadow: 3px 3px 20px grey;
+}
+
 @media (min-width: 600px) {
   .grid {
     min-width: 1200px;
     flex-direction: column;
+  }
+
+  .boat {
+    width: 60%;
   }
 }
