@@ -16,25 +16,6 @@
   align-items: center;
 }
 
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer img {
-  margin-left: 0.5rem;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -81,16 +62,17 @@
 }
 
 .card {
-  margin: 0.2rem;
-  flex-basis: 15%;
+  margin: 0.5rem;
+  flex-basis: 65%;
   min-width: 70%;
-  padding: 0.4rem;
+  padding: 1rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 7px;
   transition: color 0.15s ease, border-color 0.15s ease;
+  height: 75px;
 }
 
 .buttonWrapper {
@@ -123,8 +105,9 @@
 }
 
 .completeButton {
-  margin: 0rem;
-  width: 70px;
+  margin: 0.5rem;
+  flex-basis: 15%;
+  width: 50%;
   padding: 1rem;
   text-align: center;
   color: inherit;
@@ -148,29 +131,21 @@
   padding: 25px;
 }
 
-.card:hover {
+.card:hover,
+.card:focus,
+.card:active {
   color: #0070f3;
   border-color: black;
 }
 
 .card h3 {
   margin: 0 0 1rem 0;
-  font-size: 0.8rem;
-}
-
-.inputText {
-  margin: 0 0 0.1rem 0;
-  font-size: 0.8rem;
-  color: 'black';
-  flex-basis: '10%';
-  font-size: '24px';
-  border-width: 0px 0px 2px 0px;
+  font-size: 1.5rem;
 }
 
 .card p {
   margin: 0;
-  font-size: 0.25rem;
-
+  font-size: 1.25rem;
   line-height: 1.5;
 }
 
@@ -189,43 +164,14 @@
 .linje {
   border-bottom: 3px solid grey;
   background-color: 'red';
-  margin-top: 80px;
+  margin-top: 0px;
   width: 50%;
   border-radius: 70px;
-}
-
-.doneWrapper {
-  background-color: 'grey';
-  opacity: 0.7;
 }
 
 @media (min-width: 800px) {
   .grid {
     min-width: 1200px;
     flex-direction: column;
-  }
-
-  .inputText {
-    font-size: 1.5rem;
-  }
-  .card h3 {
-    margin: 0 0 1rem 0;
-    font-size: 1.5rem;
-  }
-  .card h2 {
-    padding-left: 4rem;
-    font-size: 1.5rem;
-  }
-
-  .boat {
-    width: 60%;
-  }
-
-  .h2 {
-    font-size: small;
-  }
-
-  .completeButton {
-    width: 150px;
   }
 }

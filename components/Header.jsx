@@ -2,8 +2,12 @@ export const Header = () => {
   return (
     <div style={{ width: 300 }}>
       <header>
-        <h1 target="_blank" rel="noopener noreferrer">
+        <h1>
           <a href="/">Agilbåt.life</a>
+        </h1>
+
+        <h1>
+          <a href="/todo">Todo</a>
         </h1>
 
         <style jsx>
