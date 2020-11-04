@@ -4,8 +4,8 @@ export const StoredDocumentList = ({ storedDocuments, downloadFile }) => {
     return (
         <div className={styles.documentListContainer}>
             <h2>Stored files</h2>
-            {storedDocuments.map(sf => (
-                <div className={styles.storedDocument}>
+            {storedDocuments.map((sf, idx) => (
+                <div key={idx} className={styles.storedDocument}>
                     <div className={styles.documentTextWrapper}>
                         <h2>{sf.fileName.length > 15 ? sf.fileName.substring(0, 15) : sf.fileName}</h2>
                     </div>

@@ -84,7 +84,7 @@ export const DocumentComponent = ({ storedDocuments, addDocument, accessToken })
 
     return (
         <div className={styles.container}>
-            <h1>Files Area</h1>
+            <h1>Files</h1>
             {fileAreaOpen ? <div className={styles.documentListContainer}>
                 <UploadDocument onFileChange={onFileChange} errors={errors} files={files} addDocument={addDocument} setFiles={setFiles} />
                 <StoredDocumentList storedDocuments={storedDocuments} downloadFile={downloadFile} />

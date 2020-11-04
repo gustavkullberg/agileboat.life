@@ -130,4 +130,8 @@
   .storedDocument h2 {
     font-size: 1.5rem;
   }
+  .container {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
 }

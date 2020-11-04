@@ -4,11 +4,13 @@ import { useState, useEffect } from 'react';
 import { checkAccessTokenExpiry } from "../utils/checkAccessTokenExpiry"
 import {checkAccessTokenRoles} from "../utils/checkAccessTokenRoles"
 import { DocumentComponent } from '../components/DocumentComponent';
+import { KeyKeeperComponent } from "../components/KeyKeeperComponent"
 
 export default function CaptainsCabin() {
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [hasCaptainRole, setHasCaptainRole] = useState(false);
   const [storedDocuments, setStoredDocuments] = useState([]);
+  const [kullbergIsKeyper, setKullbergIsKeyper] = useState(true);
 
   const addDocument = ({ dataUrl, fileName, fileSize }) => {
     fetch(`/api/document/`, { method: 'POST',  headers: { authorization: `Bearer ${localStorage.getItem("accessToken")}` }, body: JSON.stringify({ dataUrl, fileName, fileSize })})
@@ -41,6 +43,11 @@ export default function CaptainsCabin() {
         .then(response => response.json())
         .then(sortedData => setStoredDocuments(sortedData))
         .catch(err => console.log(err));
+      
+        fetch(`/api/keyper`, { headers: { authorization: `Bearer ${accessToken}` } })
+        .then(response => response.json())
+        .then(json => setKullbergIsKeyper(json.kullbergIsKeyper))
+        .catch(err => console.log(err));
     }
   }, [])
 
@@ -48,6 +55,7 @@ export default function CaptainsCabin() {
     {isAuthorized ?
       hasCaptainRole ?
         <div >
+          <KeyKeeperComponent kullbergIsKeyper={kullbergIsKeyper} setKullbergIsKeyper={setKullbergIsKeyper}/>
           <DocumentComponent storedDocuments={storedDocuments} addDocument={addDocument} accessToken={localStorage.getItem("accessToken")} />
           <div className={styles.logoutButtonWrapper}>
             <button className={styles.logoutButton} onClick={() => {
