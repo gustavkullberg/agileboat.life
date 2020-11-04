@@ -11,7 +11,7 @@ export default async (req, res) => {
       res.json({ status: 'Bad Request' });
     }
     const url =
-      'https://graph.facebook.com/oauth/access_token?client_id=485962199031939&client_secret=ce57285aca249ae7dfd2be7d3002f71f&grant_type=client_credentials';
+      `https://graph.facebook.com/oauth/access_token?client_id=485962199031939&client_secret=${process.env.FB_CLIENT_SECRET}&grant_type=client_credentials`;
 
     const { data } = await axios
       .get(url)
