@@ -48,7 +48,6 @@ export default function Todo() {
 
   return (
     <div className={styles.container}>
-      <Header />
       <TodoList tasks={tasks} handleCardClick={handleCardClick} addItem={addItem} />
     </div>
   );

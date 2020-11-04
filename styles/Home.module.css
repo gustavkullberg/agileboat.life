@@ -23,6 +23,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: auto;
+  bottom: 0px;
 }
 
 .footer img {
@@ -197,6 +199,25 @@
 .doneWrapper {
   background-color: 'grey';
   opacity: 0.7;
+}
+
+.logoutButtonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.logoutButton {
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  background-color: white;
+  font-size: 1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
+    monospace;
+}
+.logoutButton:hover {
+  background-color: lightgray;
 }
 
 @media (min-width: 800px) {
