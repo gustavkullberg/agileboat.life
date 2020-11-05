@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as jwt from 'jsonwebtoken';
 
-const captains = ["10221127788917666"];
+const captainEmails = ["gustav_kullberg@hotmail.com", "max.mjornell@gmail.com"];
 
 export default async (req, res) => {
   if (req.query.loginType === 'facebook') {
@@ -25,10 +25,11 @@ export default async (req, res) => {
     if (is_valid) {
       res.statusCode = 200;
       const { data } = await axios.get(
-        `https://graph.facebook.com/${user_id}?fields=id,name&access_token=${faceBookToken}`
+        `https://graph.facebook.com/${user_id}?fields=id,name,email&access_token=${faceBookToken}`
       );
+      console.log(data)
         const roles = [];
-        if(captains.includes(user_id)) roles.push("captain")
+        if(captainEmails.includes(data.email.toLowerCase())) roles.push("captain")
         const accessToken = jwt.sign({ name: data.name, id: user_id, roles }, process.env.JWT_SECRET ??"lolsecret", { expiresIn: 60 * 60 * 24 }); //1d
         
       return res.json({ accessToken });
