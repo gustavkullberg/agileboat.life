@@ -30,7 +30,7 @@ export default async (req, res) => {
       console.log(data)
         const roles = [];
         if(captainEmails.includes(data.email.toLowerCase())) roles.push("captain")
-        const accessToken = jwt.sign({ name: data.name, id: user_id, roles }, process.env.JWT_SECRET ??"lolsecret", { expiresIn: 60 * 60 * 24 }); //1d
+        const accessToken = jwt.sign({ name: data.name, id: user_id, email:data.email.toLowerCase(), roles }, process.env.JWT_SECRET ??"lolsecret", { expiresIn: 60 * 60 * 24 }); //1d
         
       return res.json({ accessToken });
     } else {
