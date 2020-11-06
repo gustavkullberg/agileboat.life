@@ -11,6 +11,8 @@ export default function CaptainsCabin() {
   const [hasCaptainRole, setHasCaptainRole] = useState(false);
   const [storedDocuments, setStoredDocuments] = useState([]);
   const [kullbergIsKeyper, setKullbergIsKeyper] = useState(true);
+  const [keyperUpdatedTime, setKeyperUpdatedTime] = useState("");
+
 
   const addDocument = ({ dataUrl, fileName, fileSize }) => {
     fetch(`/api/document/`, { method: 'POST',  headers: { authorization: `Bearer ${localStorage.getItem("accessToken")}` }, body: JSON.stringify({ dataUrl, fileName, fileSize })})
@@ -46,7 +48,10 @@ export default function CaptainsCabin() {
       
         fetch(`/api/keyper`, { headers: { authorization: `Bearer ${accessToken}` } })
         .then(response => response.json())
-        .then(json => setKullbergIsKeyper(json.kullbergIsKeyper))
+          .then(json => {
+            setKeyperUpdatedTime(json.updatedDate);
+            setKullbergIsKeyper(json.kullbergIsKeyper)
+          })
         .catch(err => console.log(err));
     }
   }, [])
@@ -55,7 +60,7 @@ export default function CaptainsCabin() {
     {isAuthorized ?
       hasCaptainRole ?
         <div >
-          <KeyKeeperComponent kullbergIsKeyper={kullbergIsKeyper} setKullbergIsKeyper={setKullbergIsKeyper}/>
+          <KeyKeeperComponent keyperUpdatedTime={keyperUpdatedTime} kullbergIsKeyper={kullbergIsKeyper} setKullbergIsKeyper={setKullbergIsKeyper} setKeyperUpdatedTime={setKeyperUpdatedTime}/>
           <DocumentComponent storedDocuments={storedDocuments} addDocument={addDocument} accessToken={localStorage.getItem("accessToken")} />
           <div className={styles.logoutButtonWrapper}>
             <button className={styles.logoutButton} onClick={() => {

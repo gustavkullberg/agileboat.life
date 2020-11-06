@@ -29,6 +29,11 @@
     monospace;
 }
 
+.container h5 {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
+    monospace;
+}
+
 @media (min-width: 800px) {
   .container {
     margin-left: 200px;
