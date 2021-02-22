@@ -31,10 +31,6 @@ export const Header = () => {
           <a href="/">Agilbåt.life</a>
         </h1>
 
-        <h1>
-          <a href="/todo">Todo</a>
-        </h1>
-
         <style jsx>
           {`
             header {
