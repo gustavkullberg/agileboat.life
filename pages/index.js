@@ -39,11 +39,13 @@ const imageArr = [
 
 const bannerIndices = [0, 2, 4, 8, 13]
 
+Modal.setAppElement("body")
+
 export default function Home() {
   const [mainImageId, setMainImageId] = useState(0);
   const [commentId, setCommentId] = useState(0);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [modalImageSrc, setModalImageSrc] = useState("");
+  const [modalImageId, setModalImageId] = useState(0);
 
   useInterval(() => mainImageId < bannerIndices.length - 1 ? setMainImageId(mainImageId + 1) : setMainImageId(0), 5000);
   useInterval(() => commentId < comments.length - 1 ? setCommentId(commentId + 1) : setCommentId(0), 7000);
@@ -66,15 +68,13 @@ export default function Home() {
       <div className={styles.gallery}>
         {imageArr.map((i, idx) => <div className={styles.galleryImageContainer} key={idx} onClick={() => {
           setModalIsOpen(true);
-          setModalImageSrc(i.image)
+          setModalImageId(idx)
         }}>
           <img key={i} className={styles.galleryImage} src={i.tn} />
-          <h2 className={styles.imageText}>{i.date}</h2>
         </div>)}
       </div>
       <Modal
         isOpen={modalIsOpen}
-        ariaHideApp={false}
         onRequestClose={() => {
           setModalIsOpen(false);
         }}
@@ -83,7 +83,8 @@ export default function Home() {
         <div onClick={() => setModalIsOpen(false)} className={styles.modalCloseButton}>
           <ion-icon size="large" name="close-circle" color="light"></ion-icon>
         </div>
-        <img className={styles.modalImage} src={modalImageSrc}></img>
+        <img className={styles.modalImage} src={imageArr[modalImageId].image}></img>
+        <p className={styles.modalText}>{imageArr[modalImageId].date}</p>
       </Modal>
     </div>
   );
