@@ -8,15 +8,19 @@ import Modal from 'react-modal';
 const comments = [
   {
     text: "Bottenmåla? Varför skulle man göra det?",
-    author: "Säljande ägare",
+    author: "Tidigare ägare",
     date: "2020-08-09"
   },
   {
     text: "Vi gör lätt skrap och slip på en helg",
     author: "Max",
     date: "2021-02-27"
-  }
-]
+  },
+  {
+    text: "Det här en riktig båt",
+    author: "Ångerfull Nimbusägare",
+    date: "2020-09-04"
+  }]
 
 
 const imageArr = [
@@ -37,7 +41,7 @@ const imageArr = [
   { date: "2021-03-13", tn: "/boat-2021-03-13-4-tn.jpeg", image: "/boat-2021-03-13-4.jpeg" },
   { date: "2021-03-13", tn: "/boat-2021-03-13-5-tn.jpeg", image: "/boat-2021-03-13-5.jpeg" }]
 
-const bannerIndices = [0, 2, 4, 8, 13]
+const bannerIndices = [0, 2, 4, 13]
 
 Modal.setAppElement("body")
 
@@ -62,6 +66,12 @@ export default function Home() {
       <div className={styles.commentsContainer}>
         <h2>Sagt om båten</h2>
         <p>"{comments[commentId].text}"</p> <p>- {comments[commentId].author}, &nbsp; {new Date(comments[commentId].date).toLocaleDateString()}</p>
+        <div style={{ display: "flex" }}>
+          {comments.map((c, idx) => idx !== commentId
+            ? <span onClick={() => setCommentId(idx)} className={styles.dot}></span>
+            : <span className={styles.markedDot}></span>
+          )}
+        </div>
       </div>
 
       <h2>Gallery</h2>
