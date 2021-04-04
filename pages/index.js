@@ -17,7 +17,7 @@ const comments = [
     date: "2021-02-27"
   },
   {
-    text: "Det här en riktig båt",
+    text: "Det här är en riktig båt",
     author: "Ångerfull Nimbusägare",
     date: "2020-09-04"
   }]
