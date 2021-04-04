@@ -25,7 +25,7 @@ export const Header = () => {
 
   }, [])
   return (
-    <div style={{ width: 300, position: "fixed", top: 0, display: `${headerIsVisible ? "" : "none"}` }}>
+    <div style={{ width: 300, top: 0 }}>
       <header>
         <h1>
           <a href="/">Agilbåt.life</a>
@@ -35,8 +35,7 @@ export const Header = () => {
           {`
             header {
               width: 100%;
-              height: 100px;
-              border-bottom: 1px solid #eaeaea;
+              height: 100px; 
               display: flex;
               justify-content: center;
               align-items: center;

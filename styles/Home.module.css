@@ -1,5 +1,5 @@
 .container {
-  min-height: 100vh;
+  /*min-height: 100vh;*/
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
@@ -8,12 +8,32 @@
 }
 
 .main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.mainImage {
+  width: 100%;
+  height: 400px;
+  padding: 4px;
+  object-fit: cover;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.galleryImage {
+  padding: 10px;
+  width: 50%;
+}
+.galleryImage:hover {
+  padding: 4px;
 }
 
 .footer {
@@ -69,8 +89,8 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
-    monospace;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
@@ -163,9 +183,9 @@
 .inputText {
   margin: 0 0 0.1rem 0;
   font-size: 0.8rem;
-  color: 'black';
-  flex-basis: '10%';
-  font-size: '24px';
+  color: "black";
+  flex-basis: "10%";
+  font-size: "24px";
   border-width: 0px 0px 2px 0px;
 }
 
@@ -180,7 +200,7 @@
   height: 1em;
 }
 
-.input[type='checkbox'] {
+.input[type="checkbox"] {
   zoom: 50;
 }
 
@@ -188,16 +208,9 @@
   width: 95%;
   box-shadow: 3px 3px 20px grey;
 }
-.linje {
-  border-bottom: 3px solid grey;
-  background-color: 'red';
-  margin-top: 80px;
-  width: 50%;
-  border-radius: 70px;
-}
 
 .doneWrapper {
-  background-color: 'grey';
+  background-color: "grey";
   opacity: 0.7;
 }
 
@@ -213,8 +226,8 @@
   border-radius: 30px;
   background-color: white;
   font-size: 1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
-    monospace;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 .logoutButton:hover {
   background-color: lightgray;
@@ -224,6 +237,14 @@
   .grid {
     min-width: 1200px;
     flex-direction: column;
+  }
+
+  .galleryImage {
+    width: 25%;
+  }
+
+  .mainImage {
+    height: 800px;
   }
 
   .inputText {
