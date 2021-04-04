@@ -9,7 +9,7 @@ const imageArr = ["/boat.jpg", "/boat-2021-02-27-1.jpeg", "/boat-2021-02-27-2.jp
 export default function Home() {
   const [mainImageId, setMainImageId] = useState(0);
 
-  useInterval(() => setMainImageId(mainImageId + 1), 5000);
+  useInterval(() => mainImageId < imageArr.length - 1 ? setMainImageId(mainImageId + 1) : setMainImageId(0), 5000);
 
   return (
     <div className={styles.container}>

@@ -31,6 +31,7 @@
 .galleryImage {
   padding: 10px;
   width: 50%;
+  max-height: 250px;
 }
 .galleryImage:hover {
   padding: 4px;
