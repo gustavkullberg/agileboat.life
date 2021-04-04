@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <div className={styles.container}>
       <Header />
       <Component {...pageProps} />
-      <footer className={styles.footer}>© Agilbåt.life, 2020</footer>
+      <footer className={styles.footer}>© Agilbåt.life, 2021</footer>
     </div>
   )
 }

@@ -242,6 +242,14 @@
 
   .galleryImage {
     width: 25%;
+    max-height: 10000px;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .mainImage {
