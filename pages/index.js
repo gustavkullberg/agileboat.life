@@ -53,7 +53,7 @@ const imageArr = [
   { date: "2021-04-09", tn: "/boat-2021-04-09-1-tn.jpg", image: "/boat-2021-04-09-1.jpg" },
   { date: "2021-04-09", tn: "/boat-2021-04-09-2-tn.jpeg", image: "/boat-2021-04-09-2.jpeg" },
   { date: "2021-04-09", tn: "/boat-2021-04-09-3-tn.jpeg", image: "/boat-2021-04-09-3.jpeg" },
-  { date: "2021-05-08", tn: "/boat-2021-05-08-1-tn.jpeg", image: "/boat-2021-05-08-1.jpeg" },
+  { date: "2021-05-08", tn: "/boat-2021-05-08-1-tn.JPEG", image: "/boat-2021-05-08-1.JPEG" },
   { date: "2021-05-08", tn: "/boat-2021-05-08-2-tn.JPEG", image: "/boat-2021-05-08-2.JPEG" },
   { date: "2021-05-08", tn: "/boat-2021-05-08-3-tn.JPEG", image: "/boat-2021-05-08-3.JPEG" },
   { date: "2021-05-08", tn: "/boat-2021-05-08-4-tn.JPEG", image: "/boat-2021-05-08-4.JPEG" },
