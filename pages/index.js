@@ -3,13 +3,23 @@ import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 import { useInterval } from "../useInterval";
 import Modal from 'react-modal';
-
+import { isMobile } from 'react-device-detect';
 
 const comments = [
   {
-    text: "Bottenmåla? Varför skulle man göra det?",
-    author: "Tidigare ägare",
-    date: "2020-08-09"
+    text: "Fin båt",
+    author: "Okänd man i Sandhamn",
+    date: "2021-05-16"
+  },
+  {
+    text: "Det här är en riktig båt",
+    author: "Ångerfull Nimbusägare",
+    date: "2020-09-04"
+  },
+  {
+    text: "<Beundrar intensivt>",
+    author: "Doktor Baisse Isaksson",
+    date: "2021-05-16"
   },
   {
     text: "Vi gör lätt skrap och slip på en helg",
@@ -17,11 +27,10 @@ const comments = [
     date: "2021-02-27"
   },
   {
-    text: "Det här är en riktig båt",
-    author: "Ångerfull Nimbusägare",
-    date: "2020-09-04"
+    text: "Bottenmåla? Varför skulle man göra det?",
+    author: "Tidigare ägare",
+    date: "2020-08-09"
   }]
-
 
 const imageArr = [
   { date: "2020-09-04", tn: "/boat-tn.jpg", image: "/boat.jpg" },
@@ -39,9 +48,26 @@ const imageArr = [
   { date: "2021-03-13", tn: "/boat-2021-03-13-2-tn.jpeg", image: "/boat-2021-03-13-2.jpeg" },
   { date: "2021-03-13", tn: "/boat-2021-03-13-3-tn.jpeg", image: "/boat-2021-03-13-3.jpeg" },
   { date: "2021-03-13", tn: "/boat-2021-03-13-4-tn.jpeg", image: "/boat-2021-03-13-4.jpeg" },
-  { date: "2021-03-13", tn: "/boat-2021-03-13-5-tn.jpeg", image: "/boat-2021-03-13-5.jpeg" }]
+  { date: "2021-03-13", tn: "/boat-2021-03-13-5-tn.jpeg", image: "/boat-2021-03-13-5.jpeg" },
+  { date: "2021-04-09", tn: "/video-1.mp4", image: "/video-1.mp4" },
+  { date: "2021-04-09", tn: "/boat-2021-04-09-1-tn.jpg", image: "/boat-2021-04-09-1.jpg" },
+  { date: "2021-04-09", tn: "/boat-2021-04-09-2-tn.jpeg", image: "/boat-2021-04-09-2.jpeg" },
+  { date: "2021-04-09", tn: "/boat-2021-04-09-3-tn.jpeg", image: "/boat-2021-04-09-3.jpeg" },
+  { date: "2021-05-08", tn: "/boat-2021-05-08-1-tn.jpeg", image: "/boat-2021-05-08-1.jpeg" },
+  { date: "2021-05-08", tn: "/boat-2021-05-08-2-tn.jpeg", image: "/boat-2021-05-08-2.jpeg" },
+  { date: "2021-05-08", tn: "/boat-2021-05-08-3-tn.jpeg", image: "/boat-2021-05-08-3.jpeg" },
+  { date: "2021-05-08", tn: "/boat-2021-05-08-4-tn.jpeg", image: "/boat-2021-05-08-4.jpeg" },
+  { date: "2021-05-08", tn: "/boat-2021-05-08-5-tn.jpeg", image: "/boat-2021-05-08-5.jpeg" },
+  { date: "2021-05-13", tn: "/boat-2021-05-13-1-tn.jpeg", image: "/boat-2021-05-13-1.jpeg" },
+  { date: "2021-05-13", tn: "/boat-2021-05-13-2-tn.jpeg", image: "/boat-2021-05-13-2.jpeg" },
+  { date: "2021-05-13", tn: "/boat-2021-05-13-3-tn.jpeg", image: "/boat-2021-05-13-3.jpeg" },
+  { date: "2021-05-13", tn: "/boat-2021-05-13-4-tn.jpeg", image: "/boat-2021-05-13-4.jpeg" },
+  { date: "2021-05-13", tn: "/boat-2021-05-13-5-tn.jpeg", image: "/boat-2021-05-13-5.jpeg" },
+]
 
-const bannerIndices = [0, 2, 4, 13]
+const bannerIndices = isMobile
+  ? [26, 24, 25, 19]
+  : [27, 25, 29]
 
 Modal.setAppElement("body")
 
@@ -76,12 +102,16 @@ export default function Home() {
 
       <h2>Gallery</h2>
       <div className={styles.gallery}>
-        {imageArr.map((i, idx) => <div className={styles.galleryImageContainer} key={idx} onClick={() => {
+        {imageArr.map((i, idx) => !i.tn.includes("mp4") ? <div className={styles.galleryImageContainer} key={idx} onClick={() => {
           setModalIsOpen(true);
           setModalImageId(idx)
         }}>
           <img key={i} className={styles.galleryImage} src={i.tn} />
-        </div>)}
+        </div> : <video className={styles.galleryImageContainer} controls preload="metadata">
+          <source src="video-1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+        </video>)}
+
       </div>
       <Modal
         isOpen={modalIsOpen}

@@ -28,7 +28,7 @@ export const Header = () => {
     <div style={{ width: 300, top: 0 }}>
       <header>
         <h1>
-          <img width="120px" src="https://valueinsights.ch/wp-content/uploads/2019/12/certified-safe-5-agilist_626x352.png"></img>
+          <img width="120px" style={{ padding: "7px" }} src="/ablogo.png"></img>
           <a href="/">Agilbåt.life</a>
         </h1>
 
