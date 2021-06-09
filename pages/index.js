@@ -126,7 +126,7 @@ export default function Home() {
         <img className={styles.modalImage} src={imageArr[modalImageId].image}></img>
         <p className={styles.modalText}>{imageArr[modalImageId].date}</p>
       </Modal>
-      <iframe src="https://open.spotify.com/embed/playlist/6J30HUwa3Iv28LLcZn5Gt8" width="95%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe src="https://open.spotify.com/embed/playlist/6J30HUwa3Iv28LLcZn5Gt8" style={{ borderRadius: "8px" }} width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
   );
 }
