@@ -79,6 +79,10 @@ export default function Home() {
 
   useInterval(() => mainImageId < bannerIndices.length - 1 ? setMainImageId(mainImageId + 1) : setMainImageId(0), 5000);
   useInterval(() => commentId < comments.length - 1 ? setCommentId(commentId + 1) : setCommentId(0), 7000);
+  const closeModal = () => {
+    setModalIsOpen(false);
+    document.body.style.overflow = 'unset';
+  }
 
   return (
     <div className={styles.container}>
@@ -104,23 +108,24 @@ export default function Home() {
       <div className={styles.gallery}>
         {imageArr.map((i, idx) => !i.tn.includes("mp4") ? <div className={styles.galleryImageContainer} key={idx} onClick={() => {
           setModalIsOpen(true);
+          document.body.style.overflow = 'hidden';
           setModalImageId(idx)
         }}>
           <img key={i} className={styles.galleryImage} src={i.tn} />
         </div> : <video className={styles.galleryImageContainer} controls preload="metadata">
           <source src="video-1.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+          Your browser does not support the video tag.
         </video>)}
 
       </div>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => {
-          setModalIsOpen(false);
+          closeModal();
         }}
         className={styles.modal}
       >
-        <div onClick={() => setModalIsOpen(false)} className={styles.modalCloseButton}>
+        <div onClick={() => closeModal()} className={styles.modalCloseButton}>
           <ion-icon size="large" name="close-circle" color="light"></ion-icon>
         </div>
         <img className={styles.modalImage} src={imageArr[modalImageId].image}></img>
