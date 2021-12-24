@@ -98,6 +98,7 @@ export default function Home() {
 
       <Head>
         <title>Agilbåt</title>
+        <link rel="shortcut icon" href="/ablogo.ico" />
       </Head>
       <div>
         <img className={styles.mainImage} src={imageArr[bannerIndices[mainImageId]].image} />
