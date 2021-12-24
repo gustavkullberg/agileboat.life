@@ -45,6 +45,7 @@ const imageArr = [
   { date: "2021-03-07", tn: "/boat-2021-03-07-2-tn.jpeg", image: "/boat-2021-03-07-2.jpeg" },
   { date: "2021-03-07", tn: "/boat-2021-03-07-3-tn.jpeg", image: "/boat-2021-03-07-3.jpeg" },
   { date: "2021-03-13", tn: "/boat-2021-03-13-1-tn.jpeg", image: "/boat-2021-03-13-1.jpeg" },
+  { date: "2021-03-13", tn: "/boat-2021-03-13-6-tn.jpeg", image: "/boat-2021-03-13-6.jpeg" },
   { date: "2021-03-13", tn: "/boat-2021-03-13-2-tn.jpeg", image: "/boat-2021-03-13-2.jpeg" },
   { date: "2021-03-13", tn: "/boat-2021-03-13-3-tn.jpeg", image: "/boat-2021-03-13-3.jpeg" },
   { date: "2021-03-13", tn: "/boat-2021-03-13-4-tn.jpeg", image: "/boat-2021-03-13-4.jpeg" },
@@ -63,6 +64,14 @@ const imageArr = [
   { date: "2021-05-13", tn: "/boat-2021-05-13-3-tn.JPEG", image: "/boat-2021-05-13-3.JPEG" },
   { date: "2021-05-13", tn: "/boat-2021-05-13-4-tn.JPEG", image: "/boat-2021-05-13-4.JPEG" },
   { date: "2021-05-13", tn: "/boat-2021-05-13-5-tn.JPEG", image: "/boat-2021-05-13-5.JPEG" },
+  { date: "2021-06-04", tn: "/boat-2021-06-04-1-tn.jpg", image: "/boat-2021-06-04-1.jpg" },
+  { date: "2021-06-04", tn: "/boat-2021-06-04-2-tn.jpg", image: "/boat-2021-06-04-2.jpg" },
+  { date: "2021-06-04", tn: "/boat-2021-06-04-3-tn.jpg", image: "/boat-2021-06-04-3.jpg" },
+  { date: "2021-06-04", tn: "/boat-2021-06-04-4-tn.jpg", image: "/boat-2021-06-04-4.jpg" },
+  { date: "2021-06-18", tn: "/boat-2021-06-18-1-tn.jpg", image: "/boat-2021-06-18-1.jpg" },
+  { date: "2021-06-20", tn: "/boat-2021-06-20-1-tn.JPEG", image: "/boat-2021-06-20-1.JPEG" },
+  { date: "2021-09-26", tn: "/boat-2021-09-26-1-tn.jpg", image: "/boat-2021-09-26-1.jpg" },
+  { date: "2021-10-10", tn: "/boat-2021-10-10-1-tn.jpg", image: "/boat-2021-10-10-1.jpg" },
 ]
 
 const bannerIndices = isMobile
