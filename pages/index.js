@@ -75,8 +75,8 @@ const imageArr = [
 ]
 
 const bannerIndices = isMobile
-  ? [26, 24, 25, 19]
-  : [27, 25, 29]
+  ? [34, 25, 24, 19, 26]
+  : [34, 27, 25, 29]
 
 Modal.setAppElement("body")
 
