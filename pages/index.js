@@ -93,6 +93,16 @@ export default function Home() {
     document.body.style.overflow = 'unset';
   }
 
+  const handleSetModalImageId = id => {
+    if (id < 0) {
+      return setModalImageId(imageArr.length - 1);
+    }
+    if (id >= imageArr.length) {
+      return setModalImageId(0);
+    }
+    setModalImageId(id);
+  }
+
   return (
     <div className={styles.container}>
 
@@ -119,7 +129,7 @@ export default function Home() {
         {imageArr.map((i, idx) => !i.tn.includes("mp4") ? <div className={styles.galleryImageContainer} key={idx} onClick={() => {
           setModalIsOpen(true);
           document.body.style.overflow = 'hidden';
-          setModalImageId(idx)
+          handleSetModalImageId(idx)
         }}>
           <img key={i} className={styles.galleryImage} src={i.tn} />
         </div> : <video className={styles.galleryImageContainer} controls preload="metadata">
@@ -135,11 +145,18 @@ export default function Home() {
         }}
         className={styles.modal}
       >
-        <div onClick={() => closeModal()} className={styles.modalCloseButton}>
-          <ion-icon size="large" name="close-circle" color="light"></ion-icon>
+        <div className={styles.modalContainer}>
+          <div onClick={() => closeModal()} className={styles.modalCloseButton}>
+            <ion-icon size="large" name="close-circle" color="light"></ion-icon>
+          </div>
+          <img className={styles.modalImage} src={imageArr[modalImageId].image}></img>
+
+          <div className={styles.modalImageNavigation}>
+            <ion-icon style={{ cursor: "pointer" }} onClick={() => handleSetModalImageId(modalImageId - 1)} size="large" name="arrow-back" color="light"></ion-icon>
+            <p >{imageArr[modalImageId].date}</p>
+            <ion-icon style={{ cursor: "pointer" }} onClick={() => handleSetModalImageId(modalImageId + 1)} size="large" name="arrow-forward" color="light"></ion-icon>
+          </div>
         </div>
-        <img className={styles.modalImage} src={imageArr[modalImageId].image}></img>
-        <p className={styles.modalText}>{imageArr[modalImageId].date}</p>
       </Modal>
       <iframe src="https://open.spotify.com/embed/playlist/6J30HUwa3Iv28LLcZn5Gt8" style={{ borderRadius: "8px" }} width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
