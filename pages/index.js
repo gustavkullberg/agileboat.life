@@ -32,8 +32,10 @@ const comments = [
     date: "2020-08-09"
   }]
 
-const imageArr = [
+const images = [
   { date: "2020-09-04", tn: "/boat-tn.jpg", image: "/boat.jpg" },
+
+  //2021
   { date: "2021-02-27", tn: "/boat-2021-02-27-1-tn.jpeg", image: "/boat-2021-02-27-1.jpeg" },
   { date: "2021-02-27", tn: "/boat-2021-02-27-2-tn.jpeg", image: "/boat-2021-02-27-2.jpeg" },
   { date: "2021-02-27", tn: "/boat-2021-02-27-3-tn.jpeg", image: "/boat-2021-02-27-3.jpeg" },
@@ -72,6 +74,19 @@ const imageArr = [
   { date: "2021-06-20", tn: "/boat-2021-06-20-1-tn.JPEG", image: "/boat-2021-06-20-1.JPEG" },
   { date: "2021-09-26", tn: "/boat-2021-09-26-1-tn.jpg", image: "/boat-2021-09-26-1.jpg" },
   { date: "2021-10-10", tn: "/boat-2021-10-10-1-tn.jpg", image: "/boat-2021-10-10-1.jpg" },
+
+  //2022
+  { date: "2022-02-26", tn: "/boat-2022-02-26-tn.jpg", image: "/boat-2022-02-26.jpg" },
+  { date: "2022-03-01", tn: "/boat-2022-03-01-tn.jpg", image: "/boat-2022-03-01.jpg" },
+  { date: "2022-04-01", tn: "/boat-2022-04-01-tn.jpg", image: "/boat-2022-04-01.jpg" },
+  { date: "2022-04-03", tn: "/boat-2022-04-03-tn.jpg", image: "/boat-2022-04-03.jpg" },
+  { date: "2022-04-18", tn: "/boat-2022-04-18-1-tn.jpg", image: "/boat-2022-04-18-1.jpg" },
+  { date: "2022-04-18", tn: "/boat-2022-04-18-2-tn.jpg", image: "/boat-2022-04-18-2.jpg" },
+  { date: "2022-04-18", tn: "/boat-2022-04-18-3-tn.jpg", image: "/boat-2022-04-18-3.jpg" },
+  { date: "2022-04-23", tn: "/boat-2022-04-23-1-tn.jpg", image: "/boat-2022-04-23-1.jpg" },
+  { date: "2022-04-23", tn: "/boat-2022-04-23-2-tn.jpg", image: "/boat-2022-04-23-2.jpg" },
+  { date: "2022-04-23", tn: "/boat-2022-04-23-3-tn.jpg", image: "/boat-2022-04-23-3.jpg" },
+  { date: "2022-04-23", tn: "/boat-2022-04-23-4-tn.jpg", image: "/boat-2022-04-23-4.jpg" },
 ]
 
 const bannerIndices = isMobile
@@ -95,9 +110,9 @@ export default function Home() {
 
   const handleSetModalImageId = id => {
     if (id < 0) {
-      return setModalImageId(imageArr.length - 1);
+      return setModalImageId(images.length - 1);
     }
-    if (id >= imageArr.length) {
+    if (id >= images.length) {
       return setModalImageId(0);
     }
     setModalImageId(id);
@@ -111,7 +126,7 @@ export default function Home() {
         <link rel="shortcut icon" href="/ablogo.ico" />
       </Head>
       <div>
-        <img className={styles.mainImage} src={imageArr[bannerIndices[mainImageId]].image} />
+        <img className={styles.mainImage} src={images[bannerIndices[mainImageId]].image} />
       </div>
       <div className={styles.commentsContainer}>
         <h2>Sagt om båten</h2>
@@ -126,7 +141,7 @@ export default function Home() {
 
       <h2>Gallery</h2>
       <div className={styles.gallery}>
-        {imageArr.map((i, idx) => !i.tn.includes("mp4") ? <div className={styles.galleryImageContainer} key={idx} onClick={() => {
+        {images.map((i, idx) => !i.tn.includes("mp4") ? <div className={styles.galleryImageContainer} key={idx} onClick={() => {
           setModalIsOpen(true);
           document.body.style.overflow = 'hidden';
           handleSetModalImageId(idx)
@@ -149,11 +164,11 @@ export default function Home() {
           <div onClick={() => closeModal()} className={styles.modalCloseButton}>
             <ion-icon size="large" name="close-circle" color="light"></ion-icon>
           </div>
-          <img className={styles.modalImage} src={imageArr[modalImageId].image}></img>
+          <img className={styles.modalImage} src={images[modalImageId].image}></img>
 
           <div className={styles.modalImageNavigation}>
             <ion-icon style={{ cursor: "pointer" }} onClick={() => handleSetModalImageId(modalImageId - 1)} size="large" name="arrow-back" color="light"></ion-icon>
-            <p >{imageArr[modalImageId].date}</p>
+            <p >{images[modalImageId].date}</p>
             <ion-icon style={{ cursor: "pointer" }} onClick={() => handleSetModalImageId(modalImageId + 1)} size="large" name="arrow-forward" color="light"></ion-icon>
           </div>
         </div>
