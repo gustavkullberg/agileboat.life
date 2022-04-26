@@ -13,12 +13,12 @@ const comments = [
   },
   {
     text: "Det här är en riktig båt",
-    author: "Ångerfull Nimbusägare",
+    author: "Nimbusägare",
     date: "2020-09-04"
   },
   {
     text: "<Beundrar intensivt>",
-    author: "Doktor Baisse Isaksson",
+    author: "Börspoddens Johan Isaksson",
     date: "2021-05-16"
   },
   {
@@ -27,12 +27,13 @@ const comments = [
     date: "2021-02-27"
   },
   {
-    text: "Bottenmåla? Varför skulle man göra det?",
+    text: "Varför skulle man bottenmåla?",
     author: "Tidigare ägare",
     date: "2020-08-09"
   }]
 
 const images = [
+  //2020
   { date: "2020-09-04", tn: "/boat-tn.jpg", image: "/boat.jpg" },
 
   //2021
