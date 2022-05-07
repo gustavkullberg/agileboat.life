@@ -38,11 +38,13 @@ export default function Home() {
     setModalImageId(id);
   }
 
+  const getImageIdByName = (name) => images.findIndex(i => i.image === name);
+
   const toggleTag = tag => {
-    if (selectedTags.includes(tag)) {
-      setSelectedTags(selectedTags.filter(t => t != tag));
+    if (selectedTags.length == 1 && selectedTags.includes(tag)) {
+      setSelectedTags(Object.values(tags))
     } else {
-      setSelectedTags(selectedTags.concat(tag))
+      setSelectedTags([tag])
     }
   }
 
@@ -84,7 +86,8 @@ export default function Home() {
         {images.filter(image => selectedTags.some(tag => image.tags.includes(tag))).map((i, idx) => !i.tn.includes("mp4") ? <div className={styles.galleryImageContainer} key={idx} onClick={() => {
           setModalIsOpen(true);
           document.body.style.overflow = 'hidden';
-          handleSetModalImageId(idx)
+          const id = getImageIdByName(i.image)
+          handleSetModalImageId(id)
         }}>
           <img key={i} className={styles.galleryImage} src={i.tn} />
         </div> : <video className={styles.galleryImageContainer} controls preload="metadata">
