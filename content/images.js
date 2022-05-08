@@ -2,7 +2,7 @@ import { TAGS } from './tags'
 
 export const images = [
     //2020
-    { date: "2020-09-04", tn: "/boat-tn.jpg", image: "/boat.jpg", tags: [TAGS.BEAUTY] },
+    { date: "2020-09-04", tn: "/boat-tn.jpg", image: "/boat.jpg", tags: [TAGS.BOAT] },
 
     //2021
     { date: "2021-02-27", tn: "/boat-2021-02-27-1-tn.jpeg", image: "/boat-2021-02-27-1.jpeg", tags: [TAGS.WORKSHOP] },
@@ -31,16 +31,16 @@ export const images = [
     { date: "2021-05-08", tn: "/boat-2021-05-08-4-tn.JPEG", image: "/boat-2021-05-08-4.JPEG", tags: [TAGS.LAUNCH] },
     { date: "2021-05-08", tn: "/boat-2021-05-08-5-tn.JPEG", image: "/boat-2021-05-08-5.JPEG", tags: [TAGS.LAUNCH] },
     { date: "2021-05-13", tn: "/boat-2021-05-13-1-tn.JPEG", image: "/boat-2021-05-13-1.JPEG", tags: [TAGS.RACING] },
-    { date: "2021-05-13", tn: "/boat-2021-05-13-2-tn.JPEG", image: "/boat-2021-05-13-2.JPEG", tags: [TAGS.BEAUTY] },
-    { date: "2021-05-13", tn: "/boat-2021-05-13-3-tn.JPEG", image: "/boat-2021-05-13-3.JPEG", tags: [TAGS.BEAUTY] },
-    { date: "2021-05-13", tn: "/boat-2021-05-13-4-tn.JPEG", image: "/boat-2021-05-13-4.JPEG", tags: [TAGS.BEAUTY] },
-    { date: "2021-05-13", tn: "/boat-2021-05-13-5-tn.JPEG", image: "/boat-2021-05-13-5.JPEG", tags: [TAGS.BEAUTY] },
+    { date: "2021-05-13", tn: "/boat-2021-05-13-2-tn.JPEG", image: "/boat-2021-05-13-2.JPEG", tags: [TAGS.BOAT] },
+    { date: "2021-05-13", tn: "/boat-2021-05-13-3-tn.JPEG", image: "/boat-2021-05-13-3.JPEG", tags: [TAGS.BOAT] },
+    { date: "2021-05-13", tn: "/boat-2021-05-13-4-tn.JPEG", image: "/boat-2021-05-13-4.JPEG", tags: [TAGS.BOAT] },
+    { date: "2021-05-13", tn: "/boat-2021-05-13-5-tn.JPEG", image: "/boat-2021-05-13-5.JPEG", tags: [TAGS.BOAT] },
     { date: "2021-06-04", tn: "/boat-2021-06-04-1-tn.jpg", image: "/boat-2021-06-04-1.jpg", tags: [TAGS.RACING, TAGS.PRIPPS] },
     { date: "2021-06-04", tn: "/boat-2021-06-04-2-tn.jpg", image: "/boat-2021-06-04-2.jpg", tags: [TAGS.RACING] },
     { date: "2021-06-04", tn: "/boat-2021-06-04-3-tn.jpg", image: "/boat-2021-06-04-3.jpg", tags: [TAGS.PRIPPS] },
-    { date: "2021-06-04", tn: "/boat-2021-06-04-4-tn.jpg", image: "/boat-2021-06-04-4.jpg", tags: [TAGS.RACING, TAGS.BEAUTY] },
+    { date: "2021-06-04", tn: "/boat-2021-06-04-4-tn.jpg", image: "/boat-2021-06-04-4.jpg", tags: [TAGS.RACING, TAGS.BOAT] },
     { date: "2021-06-18", tn: "/boat-2021-06-18-1-tn.jpg", image: "/boat-2021-06-18-1.jpg", tags: [TAGS.PRIPPS] },
-    { date: "2021-06-20", tn: "/boat-2021-06-20-1-tn.JPEG", image: "/boat-2021-06-20-1.JPEG", tags: [] },
+    { date: "2021-06-20", tn: "/boat-2021-06-20-1-tn.JPEG", image: "/boat-2021-06-20-1.JPEG", tags: [TAGS.BOAT] },
     { date: "2021-09-26", tn: "/boat-2021-09-26-1-tn.jpg", image: "/boat-2021-09-26-1.jpg", tags: [TAGS.LAUNCH] },
     { date: "2021-10-10", tn: "/boat-2021-10-10-1-tn.jpg", image: "/boat-2021-10-10-1.jpg", tags: [TAGS.HOUSE] },
 
@@ -56,4 +56,16 @@ export const images = [
     { date: "2022-04-23", tn: "/boat-2022-04-23-2-tn.jpg", image: "/boat-2022-04-23-2.jpg", tags: [TAGS.LAUNCH] },
     { date: "2022-04-23", tn: "/boat-2022-04-23-3-tn.jpg", image: "/boat-2022-04-23-3.jpg", tags: [TAGS.LAUNCH] },
     { date: "2022-04-23", tn: "/boat-2022-04-23-4-tn.jpg", image: "/boat-2022-04-23-4.jpg", tags: [TAGS.LAUNCH] },
+
+    { date: "2022-05-06", tn: "/boat-2022-05-06-1-tn.jpg", image: "/boat-2022-05-06-1.jpg", tags: [TAGS.PRIPPS, TAGS.BOAT] },
+    { date: "2022-05-06", tn: "/boat-2022-05-06-2-tn.jpg", image: "/boat-2022-05-06-2.jpg", tags: [TAGS.WORKSHOP] },
+    { date: "2022-05-06", tn: "/boat-2022-05-06-3-tn.jpg", image: "/boat-2022-05-06-3.jpg", tags: [TAGS.PRIPPS] },
+    { date: "2022-05-06", tn: "/boat-2022-05-06-4-tn.jpg", image: "/boat-2022-05-06-4.jpg", tags: [TAGS.PRIPPS] },
+    { date: "2022-05-06", tn: "/boat-2022-05-06-5-tn.jpg", image: "/boat-2022-05-06-5.jpg", tags: [TAGS.RACING] },
+    { date: "2022-05-06", tn: "/boat-2022-05-06-6-tn.jpg", image: "/boat-2022-05-06-6.jpg", tags: [TAGS.RACING] },
+    { date: "2022-05-06", tn: "/boat-2022-05-06-11-tn.jpg", image: "/boat-2022-05-06-11.jpg", tags: [TAGS.BOAT] },
+    { date: "2022-05-06", tn: "/boat-2022-05-06-7-tn.jpg", image: "/boat-2022-05-06-7.jpg", tags: [TAGS.BOAT] },
+    { date: "2022-05-06", tn: "/boat-2022-05-06-8-tn.jpg", image: "/boat-2022-05-06-8.jpg", tags: [TAGS.PRIPPS] },
+    { date: "2022-05-06", tn: "/boat-2022-05-06-9-tn.jpg", image: "/boat-2022-05-06-9.jpg", tags: [TAGS.PRIPPS, TAGS.RACING] },
+    { date: "2022-05-06", tn: "/boat-2022-05-06-10-tn.jpg", image: "/boat-2022-05-06-10.jpg", tags: [TAGS.HOUSE] },
 ]

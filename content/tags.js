@@ -2,7 +2,7 @@ export const TAGS = {
     HOUSE: "BÅTHUS",
     PRIPPS: "PRIPPS BLÅ",
     RACING: "RACING",
-    BEAUTY: "BEAUTY",
+    BOAT: "BÅTEN",
     LAUNCH: "SJÖSÄTTNING",
     WORKSHOP: "WORKSHOP",
 }
