@@ -68,4 +68,11 @@ export const images = [
     { date: "2022-05-06", tn: "/boat-2022-05-06-8-tn.jpg", image: "/boat-2022-05-06-8.jpg", tags: [TAGS.PRIPPS] },
     { date: "2022-05-06", tn: "/boat-2022-05-06-9-tn.jpg", image: "/boat-2022-05-06-9.jpg", tags: [TAGS.PRIPPS, TAGS.RACING] },
     { date: "2022-05-06", tn: "/boat-2022-05-06-10-tn.jpg", image: "/boat-2022-05-06-10.jpg", tags: [TAGS.HOUSE] },
+
+    { date: "2022-05-14", tn: "/boat-2022-05-14-1-tn.jpg", image: "/boat-2022-05-14-1.jpg", tags: [TAGS.PRIPPS] },
+    { date: "2022-05-14", tn: "/boat-2022-05-14-2-tn.jpg", image: "/boat-2022-05-14-2.jpg", tags: [TAGS.BOAT] },
+    { date: "2022-05-26", tn: "/boat-2022-05-26-1-tn.jpeg", image: "/boat-2022-05-26-1.jpeg", tags: [TAGS.BOAT] },
+    { date: "2022-05-26", tn: "/boat-2022-05-26-2-tn.jpeg", image: "/boat-2022-05-26-2.jpeg", tags: [TAGS.PRIPPS] },
+    { date: "2022-05-27", tn: "/boat-2022-05-27-1-tn.jpeg", image: "/boat-2022-05-27-1.jpeg", tags: [TAGS.RACING, TAGS.BOAT] },
+    { date: "2022-05-27", tn: "/boat-2022-05-27-2-tn.jpeg", image: "/boat-2022-05-27-2.jpeg", tags: [TAGS.RACING, TAGS.BOAT] },
 ]

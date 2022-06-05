@@ -5,6 +5,11 @@ export const comments = [
         date: "2021-05-16"
     },
     {
+        text: "Förra året va båten ful men i år är den fet",
+        author: "Anton Wängberg",
+        date: "2022-05-26"
+    },
+    {
         text: "Det här är en riktig båt",
         author: "Nimbusägare",
         date: "2020-09-04"
